@@ -43,7 +43,7 @@ import SideBar from "./components/SideBar.vue";
 import axios from "axios";
 import { ElNotification } from "element-plus";
 
-const host = "http://localhost:8080";
+const host = process.env.NODE_ENV === "production" ? "https://www.flickr.com": "http://localhost:8080";
 const flickerProxy = `${host}/services/feeds/photos_public.gne`;
 
 export default {
